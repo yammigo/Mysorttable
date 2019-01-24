@@ -1,0 +1,366 @@
+
+<html>
+<meta charset="utf-8">
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            font-size: 12px;
+            line-height: 25px;
+        }
+        tr {
+            height: 25px;
+        }
+
+        table{
+            margin-bottom:40px!important;
+        }
+
+        th {
+            font-size: 14px;
+            border-bottom: solid 1px #DDDDDD;
+            white-space: nowrap;
+            padding-left:20px;
+            padding-right:20px;
+            padding-top:10px;
+            padding-bottom:10px;
+        }
+        td {
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+    <script language="javascript" type="text/javascript" src="../js/myTableSort.js"></script>
+    <script language="javascript" type="text/javascript">
+        window.onload = function()
+        {
+            new MyTableSorter("sort1");
+            new MyTableSorter("sort2",1,0,4,5,6,7,8);
+            new MyTableSorter("sort3","sum",1,0,4,5,6,7,8);
+        }
+    </script>
+</head>
+<body>
+<div style="box-shadow:1px 4px 16px #4d4d4d73;font-size:150px;color:#fff;background:#f02514;width:200px;height:200px;line-height:200px;text-align:center;border-radius:50%;margin:auto;margin-top:20px;"><b style="text-shadow:0px 0px 10px #fff;">T</b></div>
+<div style="color:#f02514;font-size:40px;font-weight:bold;text-align:center;height:80px;margin-top:40px;">静态表格排序<br>
+    <p style="font-size:14px;">解决单页静态表格数据报表排序等问题而生</p>
+</div>
+<textarea disabled style="width:710px;height:500px;resize:none;background:#2b2b2b;color:white;display: block;margin:auto;margin-bottom:40px;margin-top:40px;">
+   <!--DOM结构常规静态表格  id很重要 颜色自行修改-->
+    <table border="0" style="border:solid 1px #DDDDDD;width:360px;;margin:auto" cellpadding="0" cellspacing="0" id="sort1">
+    <thead>
+    <tr style="background: #f02514;color:#fff">
+        <th>序号</th>
+        <th>渠道名</th>
+        <th>代码位id</th>
+        <th>代码位名称</th>
+        <th>展现</th>
+        <th>曝光</th>
+        <th>点击</th>
+        <th>点击率</th>
+        <th>错误</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>2</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>12432</td>
+        <td>153426</td>
+        <td>1055</td>
+        <td>0.5</td>
+        <td>0</td>
+    </tr>
+    <tr >
+        <td>10</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>124532</td>
+        <td>1534,26</td>
+        <td>105</td>
+        <td>0.5</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>12432</td>
+        <td>15,26</td>
+        <td>1052</td>
+        <td>0.578</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>1232</td>
+        <td>1526</td>
+        <td>10235</td>
+        <td>0.585</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>1232</td>
+        <td>1526</td>
+        <td>10235</td>
+        <td>0.585</td>
+        <td>0</td>
+    </tr>
+    </tbody>
+</table>
+</textarea>
+<table border="0" style="border:solid 1px #DDDDDD;width:360px;;margin:auto" cellpadding="0" cellspacing="0" id="sort1">
+    <thead>
+    <tr style="background: #f02514;color:#fff">
+        <th>序号</th>
+        <th>渠道名</th>
+        <th>代码位id</th>
+        <th>代码位名称</th>
+        <th>展现</th>
+        <th>曝光</th>
+        <th>点击</th>
+        <th>点击率</th>
+        <th>错误</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>2</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>12432</td>
+        <td>153426</td>
+        <td>1055</td>
+        <td>0.5</td>
+        <td>0</td>
+    </tr>
+    <tr >
+        <td>10</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>124532</td>
+        <td>1534,26</td>
+        <td>105</td>
+        <td>0.5</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>12432</td>
+        <td>15,26</td>
+        <td>1052</td>
+        <td>0.578</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>1232</td>
+        <td>1526</td>
+        <td>10235</td>
+        <td>0.585</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>1232</td>
+        <td>1526</td>
+        <td>10235</td>
+        <td>0.585</td>
+        <td>0</td>
+    </tr>
+    </tbody>
+</table>
+<textarea disabled style="width:710px;height:100px;resize:none;background:#2b2b2b;color:white;display: block;margin:auto;margin-bottom:40px;">
+<script type="text/javascript">
+    //普通用法
+    new MyTableSorter("sort1");
+</script>
+</textarea>
+<table border="0" style="border:solid 1px #DDDDDD;width:360px;margin:auto" cellpadding="0" cellspacing="0" id="sort2">
+    <thead>
+    <tr style="background: #f02514;color:#fff">
+        <th>序号</th>
+        <th>渠道名</th>
+        <th>代码位id</th>
+        <th>代码位名称</th>
+        <th>展现</th>
+        <th>曝光</th>
+        <th>点击</th>
+        <th>点击率</th>
+        <th>错误</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>2</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>12432</td>
+        <td>153426</td>
+        <td>1055</td>
+        <td>0.5</td>
+        <td>0</td>
+    </tr>
+    <tr >
+        <td>10</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>124532</td>
+        <td>1534,26</td>
+        <td>105</td>
+        <td>0.5</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>12432</td>
+        <td>15,26</td>
+        <td>1052</td>
+        <td>0.578</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>1232</td>
+        <td>1526</td>
+        <td>10235</td>
+        <td>0.585</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>1232</td>
+        <td>1526</td>
+        <td>10235</td>
+        <td>0.585</td>
+        <td>0</td>
+    </tr>
+    </tbody>
+</table>
+<textarea disabled style="width:710px;height:100px;resize:none;background:#2b2b2b;color:white;display: block;margin:auto;margin-bottom:40px;">
+<script type="text/javascript">
+    //指定列排序
+    new MyTableSorter("sort2",0,4,5,6,7,8);
+</script>
+</textarea>
+<table border="0" style="border:solid 1px #DDDDDD;width:360px;;margin:auto" cellpadding="0" cellspacing="0" id="sort3">
+    <thead>
+    <tr style="background: #f02514;color:#fff">
+        <th>序号</th>
+        <th>渠道名</th>
+        <th>代码位id</th>
+        <th>代码位名称</th>
+        <th>展现</th>
+        <th>曝光</th>
+        <th>点击</th>
+        <th>点击率</th>
+        <th>错误</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="background:coral;font-weight:bold;">
+        <td colspan="4">总计：</td>
+        <td>1232</td>
+        <td>15326</td>
+        <td>1045</td>
+        <td>80%</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>12432</td>
+        <td>153426</td>
+        <td>1055</td>
+        <td>0.5</td>
+        <td>0</td>
+    </tr>
+    <tr >
+        <td>10</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>124532</td>
+        <td>1534,26</td>
+        <td>105</td>
+        <td>0.5</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>12432</td>
+        <td>15,26</td>
+        <td>1052</td>
+        <td>0.578</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>1232</td>
+        <td>1526</td>
+        <td>10235</td>
+        <td>0.585</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>北京汇通</td>
+        <td>UA34583</td>
+        <td>开屏点击</td>
+        <td>1232</td>
+        <td>1526</td>
+        <td>10235</td>
+        <td>0.585</td>
+        <td>0</td>
+    </tr>
+    </tbody>
+</table>
+<textarea disabled style="width:710px;height:100px;resize:none;background:#2b2b2b;color:white;display: block;margin:auto;margin-bottom:40px;">
+<script type="text/javascript">
+    //指定列排序+指定行不排序（应用于带有统计行情况）
+    new MyTableSorter("sort3","sum",0,4,5,6,7,8);
+</script>
+</textarea>
+</body>
+</html>
